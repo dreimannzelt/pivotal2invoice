@@ -6,7 +6,7 @@ Not quite "Pivotal to invoice" yet, but at least "Pivotal CSV export to TXT file
 
 ## Usage
 
-`ruby main.rb CSV_EXPORT`
+`ruby main.rb INPUT_CSV_FILE OUTPUT_TXT_FILE`
 
 ## Environment
 
