@@ -20,8 +20,10 @@ table.each do |row|
     end
 
     accepted_at = Date.parse(row['Accepted at'])
-    s = "- #{row['Story']} (PivotalTracker ID #{row['Id']}, abgenommen am #{accepted_at.strftime(DATE_FORMAT)})."
-    s+= " Bereich: #{row['Labels']}" unless row['Labels'].nil?
-    puts s
+    unless row['Story Type'] == 'release'
+      s = "- #{row['Story']} (PivotalTracker ID #{row['Id']}, abgenommen am #{accepted_at.strftime(DATE_FORMAT)})."
+      s+= " Bereich: #{row['Labels']}" unless row['Labels'].nil?
+      puts s
+    end
   end
 end
